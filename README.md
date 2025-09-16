@@ -2,9 +2,13 @@
 
 ## Equipe
 
-| Nome | Matrícula / ID |
+| Nome | RM |
 |------|------------------|
-| Seu Nome | Seu ID |
+| Athur Alberini Soares Pereira | 565954 |
+| Fabio Pereira Rogério Júnior | 564005 |
+| Kauã Veloso Lima | 561954 |
+| Matheus Tonsa Martini | 564454 |
+| Sebastian Iriarte Gonzales | 563619 |
 
 ---
 
