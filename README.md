@@ -44,6 +44,7 @@ Ele foi implementado e testado no simulador **Wokwi** com Arduino (ou microcontr
 
 - Arduino / linguagem C++  
 - Biblioteca `Wire.h`  
-- Biblioteca `LiquidCrystal_I2C`  
+- Biblioteca `LiquidCrystal_I2C`
+- Link Wokwi  https://wokwi.com/projects/442264817239768065
 
 ---
