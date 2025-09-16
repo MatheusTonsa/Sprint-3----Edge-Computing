@@ -46,9 +46,3 @@ Ele foi implementado e testado no simulador **Wokwi** com Arduino (ou microcontr
 - Biblioteca `LiquidCrystal_I2C`  
 
 ---
-
-## Como Executar
-
-1. Clonar este repositório  
-   ```bash
-   git clone https://github.com/seu_usuario/seu_repositorio.git
