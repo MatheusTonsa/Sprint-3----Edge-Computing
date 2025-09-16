@@ -32,7 +32,8 @@ Ele foi implementado e testado no simulador **Wokwi** com Arduino (ou microcontr
 - **Interação / Botões**:  
   - `BTN_A`, `BTN_B`, `BTN_C` para navegar e confirmar escolhas.  
   - `BTN_MENU` para alternar telas ou resetar as estatísticas se mantido pressionado por certo tempo.  
-- **Telas**:  
+- **Telas**:
+- 
   1. Tela de Registro: escolher jogadora e ação (gol ou assistência).  
   2. Tela de Placar: visualizar todos os placares com rolagem.  
   3. Tela Craque da Partida: calcula com base numa fórmula simples (2×gols + assistências) para escolher a melhor.
