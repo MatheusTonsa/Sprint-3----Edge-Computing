@@ -1,77 +1,103 @@
-# Sprint-3----Edge-Computing
-
 🎮 Contador de Pontos para Jogo com ESP32 e LCD I2C
 
-Este projeto inovador oferece um sistema completo para gerenciar pontos em jogos, ideal para competições amigáveis ou acompanhamento de desempenho. Desenvolvido com um ESP32 DevKitC V4, um display LCD I2C de 20x4 e quatro botões intuitivos, ele permite registrar gols e assistências para até 7 jogadoras, exibir placares em tempo real e destacar a "Craque do Jogo" de forma dinâmica.
+📝 Descrição do Projeto
 
-✨ Funcionalidades Principais
+Este projeto implementa um sistema de contagem de pontos para um jogo, utilizando um microcontrolador ESP32, um display LCD I2C de 20x4 caracteres e quatro botões de pressão. O sistema foi desenvolvido para ser uma ferramenta simples e eficaz para registrar e acompanhar o desempenho de jogadoras em tempo real. Ele permite registrar gols e assistências para até 7 jogadoras, exibir o placar geral e identificar a "Craque do Jogo" com base nas estatísticas.
 
-•
-Registro Detalhado: Adicione gols e assistências com facilidade para cada jogadora.
+🏛️ Arquitetura Proposta
 
-•
-Placar Abrangente: Acompanhe o desempenho de todas as participantes em um placar geral claro.
+A arquitetura do projeto é baseada em um sistema embarcado simples, onde o ESP32 DevKitC V4 atua como o cérebro central, processando a lógica do jogo e gerenciando as interações com o usuário. O display LCD I2C é a interface de saída para exibir as informações, enquanto os quatro botões de pressão servem como interface de entrada para a navegação e registro de eventos.
 
-•
-Destaque da Craque: Identificação automática da jogadora com mais gols e da jogadora com mais assistências.
+Diagrama de Conexão (Wokwi)
 
-•
-Navegação Intuitiva: Alterne entre as telas de registro, placar e craque do jogo com botões dedicados.
+O projeto foi simulado na plataforma Wokwi, e o arquivo diagram.json descreve a montagem do hardware e as conexões elétricas. O ESP32 se comunica com o LCD via protocolo I2C, e os botões são conectados a pinos GPIO específicos, configurados com INPUT_PULLUP para simplificar o circuito.
 
 •
-Reinício Rápido: Opção de resetar todas as estatísticas do jogo com uma pressão longa no botão de menu.
-
-⚙️ Componentes de Hardware
-
-O coração deste projeto é o ESP32 DevKitC V4, complementado pelos seguintes componentes:
-
-ComponenteDescriçãoESP32 DevKitC V4Microcontrolador principal que gerencia toda a lógica do contador de pontos.Display LCD 20x4 I2CExibe as informações do jogo, menus de navegação e estatísticas das jogadoras.Botão Amarelo (BTN_A)Utilizado para selecionar jogadoras e confirmar ações (registrar gol ou assistência).Botão Azul (BTN_B)Navega para cima nos menus e alterna entre as opções de ação (gol/assistência).Botão Vermelho (BTN_C)Navega para baixo nos menus e alterna entre as opções de ação (gol/assistência).Botão Cinza (BTN_MENU)Alterna entre as diferentes telas (Registro, Placar, Craque do Jogo). Uma pressão longa reinicia o jogo.
-
-🔌 Diagrama de Conexão (Wokwi)
-
-Este projeto foi concebido e simulado na plataforma Wokwi. O arquivo diagram.json detalha a montagem do hardware e as conexões:
+ESP32 DevKitC V4: Microcontrolador principal.
 
 •
-Display LCD I2C: Conectado aos pinos SDA (GPIO21) e SCL (GPIO22) do ESP32.
+Display LCD 20x4 I2C: Conectado aos pinos SDA (GPIO21) e SCL (GPIO22) do ESP32.
 
 •
-Botões de Controle:
+Botões de Pressão:
 
 •
-BTN_A (Amarelo): Conectado ao pino GPIO13 do ESP32.
+🟡 Amarelo (BTN_A): Conectado ao pino GPIO13 do ESP32.
 
 •
-BTN_B (Azul): Conectado ao pino GPIO14 do ESP32.
+🔵 Azul (BTN_B): Conectado ao pino GPIO14 do ESP32.
 
 •
-BTN_C (Vermelho): Conectado ao pino GPIO12 do ESP32.
+🔴 Vermelho (BTN_C): Conectado ao pino GPIO12 do ESP32.
 
 •
-BTN_MENU (Cinza): Conectado ao pino GPIO32 do ESP32.
+⚪ Cinza (BTN_MENU): Conectado ao pino GPIO32 do ESP32.
 
 
 
-Todos os botões são configurados com INPUT_PULLUP no código e conectados ao GND através do outro terminal, garantindo um acionamento por nível baixo.
+Todos os botões são conectados ao GND através do outro terminal.
 
-📚 Bibliotecas Essenciais
+📦 Recursos Necessários
 
-Para o funcionamento do display LCD, utilizamos a biblioteca:
+Hardware
 
 •
-LiquidCrystal I2C: Essencial para a comunicação do ESP32 com o display LCD via protocolo I2C, facilitando a exibição de texto e controle do backlight.
+ESP32 DevKitC V4
 
-▶️ Como Simular no Wokwi
+•
+Display LCD 20x4 I2C
 
-Para experimentar o contador de pontos, siga os passos abaixo:
+•
+4 Botões de Pressão (Amarelo, Azul, Vermelho, Cinza)
+
+•
+Fios de conexão (jumpers)
+
+Software
+
+•
+Arduino IDE (ou ambiente de desenvolvimento compatível com ESP32)
+
+•
+Biblioteca LiquidCrystal I2C
+
+•
+Plataforma de simulação Wokwi (opcional, para simulação online)
+
+🚀 Instruções de Uso
+
+1. Configuração do Ambiente
 
 1.
-Acesse o Projeto: Navegue até o projeto no Wokwi: https://wokwi.com/projects/442264817239768065
+Certifique-se de ter a Arduino IDE instalada e configurada para o ESP32.
 
 2.
-Inicie a Simulação: Clique no botão verde "Iniciar Simulação" (ícone de play ▶️) localizado na parte superior da interface do Wokwi.
+Instale a biblioteca LiquidCrystal I2C através do Gerenciador de Bibliotecas da Arduino IDE.
+
+2. Carregando o Código
+
+1.
+Abra o arquivo sketch.ino na Arduino IDE.
+
+2.
+Conecte seu ESP32 ao computador.
 
 3.
-Interaja com os Botões: Utilize os botões virtuais no diagrama para controlar o sistema:
+Selecione a placa e a porta COM corretas na Arduino IDE.
+
+4.
+Faça o upload do código para o ESP32.
+
+3. Simulação no Wokwi (Alternativa)
+
+1.
+Acesse o projeto no Wokwi: https://wokwi.com/projects/442264817239768065
+
+2.
+Clique no botão verde "Iniciar Simulação" (ícone de play ▶️).
+
+3.
+Utilize os botões virtuais no diagrama para interagir com o sistema:
 
 •
 🟡 BTN_A (Amarelo): Seleciona uma jogadora ou confirma a ação (gol/assistência).
@@ -87,36 +113,11 @@ Interaja com os Botões: Utilize os botões virtuais no diagrama para controlar 
 
 
 
-💻 Estrutura do Código (sketch.ino)
+💻 Código-Fonte
 
-O código-fonte (sketch.ino) é cuidadosamente organizado para clareza e manutenção, dividido nas seguintes seções:
+O código-fonte principal do projeto está no arquivo sketch.ino, que gerencia toda a lógica do contador de pontos, a interação com os botões e a exibição no LCD.
 
-•
-Configuração Inicial: Define os pinos dos botões, inicializa o objeto LiquidCrystal_I2C para o LCD e configura as variáveis globais.
+👥 Alunos
 
-•
-Estruturas de Dados: Declara a struct StatsJogadora para armazenar assistencias e gols, além de arrays para nomesJogadoras e nomesAcoes.
-
-•
-Funções de Utilidade:
-
-•
-debounceRead(int pino, unsigned long &ultimoTempo): Implementa um mecanismo de debounce para os botões, garantindo leituras precisas e evitando múltiplos acionamentos.
-
-•
-resetGame(): Reinicia todas as estatísticas das jogadoras, o cursor de seleção e a tela atual para o estado inicial.
-
-
-
-•
-Gerenciamento de Telas: Um conjunto de funções (exibirTelaRegistro, exibirTelaPlacar, exibirTelaCraque, exibirSelecaoAcao) que são responsáveis por renderizar o conteúdo específico de cada tela no display LCD.
-
-•
-atualizarDisplay(): Função central que limpa o LCD e chama a função de exibição da tela atual.
-
-•
-setup(): Função de inicialização do Arduino, onde o LCD é configurado, os pinos dos botões são definidos como INPUT_PULLUP e o jogo é resetado e o display atualizado pela primeira vez.
-
-•
-loop(): A função principal que executa continuamente. Ela monitora o estado dos botões, processa as interações do usuário (seleção de jogadoras, registro de pontos, troca de telas) e atualiza o display conforme a lógica do jogo.
+Nome CompletoRM[Seu Nome Aqui][Seu RM Aqui][Nome do Aluno 2][RM do Aluno 2][Nome do Aluno 3][RM do Aluno 3][Nome do Aluno 4][RM do Aluno 4][Nome do Aluno 5][RM do Aluno 5]
 
