@@ -10,6 +10,10 @@
 
 ## Sobre o Projeto
 
+<img width="409" height="198" alt="Captura de tela 2025-09-16 145950" src="https://github.com/user-attachments/assets/62107fcd-4ade-4360-90c6-9e49323da806" />
+
+
+
 Este projeto simula um sistema para registrar estatísticas de jogadoras (gols e assistências), exibir placar, e determinar a “craque da partida”, usando um display LCD I2C e botões.  
 Ele foi implementado e testado no simulador **Wokwi** com Arduino (ou microcontrolador compatível).
 
